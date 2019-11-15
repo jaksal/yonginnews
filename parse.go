@@ -3,83 +3,44 @@ package main
 import (
 	"bytes"
 	"log"
-	"strconv"
 	"strings"
-	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
-func parseList(r []byte, expire time.Time) ([]string, bool, error) {
+// Item list of board title
+type Item struct {
+	No     string
+	Link   string
+	Title  string
+	Writer string
+	Date   string
+}
+
+func parseList(r []byte) ([]Item, error) {
 	doc, err := goquery.NewDocumentFromReader(bytes.NewReader(r))
 	if err != nil {
-		return nil, false, err
+		return nil, err
 	}
 
-	ignore := true
+	var result []Item
+	doc.Find(".t_list > table > tbody > tr").Each(func(i int, s *goquery.Selection) {
+		f1 := s.Children().First()
+		f2 := f1.Next()
+		f3 := f2.Next()
+		f4 := f3.Next()
+		f5 := f4.Next()
 
-	var result []string
-	doc.Find(".list_item").Each(func(i int, s *goquery.Selection) {
-		ignore = false
-		t := strings.TrimSpace(s.Find(".list_time").Text())
-		if strings.Contains(t, ":") {
-			arr := strings.Split(t, ":")
-			h, _ := strconv.Atoi(arr[0])
-			m, _ := strconv.Atoi(arr[1])
-			// today
-			now := time.Now()
-			n := time.Date(now.Year(), now.Month(), now.Day(), h, m, 0, 0, now.Location())
-			if !expire.Before(n) {
-				//log.Println("ignore expire date", t, n, expire)
-				ignore = true
-			}
-		} else {
-			// yester day
-			arr := strings.Split(t, "-")
-			m, _ := strconv.Atoi(arr[0])
-			d, _ := strconv.Atoi(arr[1])
-			// today
-			now := time.Now()
-			n := time.Date(now.Year(), time.Month(m), d, 0, 0, 1, 0, now.Location())
-			if !expire.Before(n) {
-				//log.Println("ignore expire date", t, n, expire)
-				ignore = true
-			}
-		}
+		var item Item
+		item.No = strings.TrimSpace(f1.Text())
+		item.Link, _ = f2.Find("a").Attr("href")
+		item.Title = strings.TrimSpace(f2.Text())
+		item.Writer = strings.TrimSpace(f4.Text())
+		item.Date = strings.TrimSpace(f5.Text())
 
-		if ignore {
-			return
-		}
-
-		/*
-			if link, exist := s.Find(".list_subject").Attr("href"); exist && !strings.Contains(link, "rule") {
-				// log.Println("add content list", t, link)
-				result = append(result, link)
-			}
-		*/
-		if subject := s.Find(".list_subject"); subject != nil {
-			if strings.Contains(subject.Text(), "클래식") {
-				return
-			}
-			if link, exist := subject.Attr("href"); exist && !strings.Contains(link, "rule") {
-				log.Println("parse content ...", t, strings.TrimSpace(subject.Text()))
-
-				cdata, err := getHTML(origin + link)
-				if err != nil {
-					panic(err)
-				}
-				links, err := parseContents(cdata)
-				if err != nil {
-					panic(err)
-				}
-				result = append(result, links...)
-
-				//result = append(result, link)
-			}
-
-		}
+		result = append(result, item)
 	})
-	return result, ignore, nil
+	return result, nil
 }
 
 func parseContents(r []byte) ([]string, error) {

@@ -1,0 +1,5334 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>
+      시정소식 &lt; 새소식 &lt; 용인소식 &lt; HOME : 용인시청 대표포털
+    </title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0"
+    />
+    <!-- // [반응형] 메타태그 추가 -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- customize -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/resources/openworks4/css/openworks4-custom.css"
+    />
+    <script type="text/javascript">
+      var CTX_PATH = "";
+    </script>
+    <!-- jquery core -->
+    <script
+      type="text/javascript"
+      src="/resources/libs/jquery/jquery-1.11.2.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/resources/libs/jquery-ui-1.11.3.custom/jquery-ui.min.js"
+    ></script>
+
+    <!-- 설정 동기화 -->
+    <script
+      type="text/javascript"
+      src="/component/js/ND_globalConfig.do"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/component/js/ND_massageConfig.do"
+    ></script>
+
+    <!-- 공통 외부 라이브러리 -->
+    <script
+      type="text/javascript"
+      src="/resources/libs/bootstrap-3.3.2-dist/js/bootstrap.min.js"
+    ></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script
+        type="text/javascript"
+        src="/resources/libs/html5shiv/3.7.2/html5shiv.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="/resources/libs/respond/1.4.2/respond.min.js"
+      ></script>
+    <![endif]-->
+
+    <!-- Openworks 공통 메소드 -->
+    <script
+      type="text/javascript"
+      src="/resources/openworks4/js/openworks.global.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/resources/openworks4/js/openworks.message.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/resources/openworks4/js/openworks.initialize.js"
+    ></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="/resources/libs/jgrowl-1.4.1/css/jquery.jgrowl.min.css" /> -->
+    <script
+      type="text/javascript"
+      src="/resources/libs/jgrowl-1.4.1/js/jquery.jgrowl.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/resources/libs/form-3.51.0/jquery.form.js"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="/resources/user/web/css/layout.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/resources/user/web/css/base.css"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/resources/user/mobile/css/mobile.css"
+      type="text/css"
+    />
+    <!-- // [반응형] 리소스 추가 -->
+
+    <!-- 20170808메인변경 -->
+    <!--  	<link rel="stylesheet" type="text/css" href="/resources/user/web/css/reset.css">  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/resources/user/web/css/master_header.css?v=1"
+    />
+    <!-- /20170808메인변경 -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/resources/user/mobile/css/mobile_new.css"
+    />
+    <script
+      type="text/javascript"
+      src="/resources/user/web/js/common.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="/resources/user/mobile/js/mobile.js"
+    ></script>
+    <!-- // [반응형] 모바일대응 리소스 추가 -->
+
+    <script
+      type="text/javascript"
+      src="/resources/common/js/jquery.mb.browser.js"
+    ></script>
+    <!-- 	<script type="text/javascript" src="/resources/common/js/jquery.printElement.js"></script> -->
+    <script
+      type="text/javascript"
+      src="/resources/user/web/js_search/bs_search.js"
+    ></script>
+    <!-- 20170808메인변경 -->
+    <script
+      type="text/javascript"
+      src="/resources/user/web/js/lib/jquery.bxslider.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/resources/user/web/js/master.js"
+    ></script>
+    <!-- /20170808메인변경 -->
+
+    <!-- 20180730메인변경 -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/resources/user/main/css/common.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/resources/user/main/css/main.css"
+    />
+    <script
+      type="text/javascript"
+      src="/resources/user/main/js/common.js"
+    ></script>
+
+    <script type="text/javascript">
+      $().ready(function() {
+        $(".top_banner_slide").bxSlider({
+          auto: true,
+          mode: "vertical",
+          pagerCustom: ".top_banner_pager",
+          controls: false,
+          autoControls: false,
+          onSliderLoad: function() {
+            $(".top_banner_pager").addClass(
+              "p" + $(".top_banner_pager a").length
+            );
+          }
+        });
+      });
+
+      /* var printElem = function(options) {
+			$("#containerWrap").printElement(options);
+		}; */
+
+      var jsDivPirnt = function() {
+        window.print();
+      };
+
+      function goTopSearch() {
+        var f = document.searchTopForm;
+        var search_word = f.search_word.value;
+        search_word = $.trim(search_word);
+        $("#id_top_group_code").val($("#h_search").val());
+
+        if (hasNullCharacter(search_word)) {
+          alert("검색어를 입력해주세요.");
+          $("#id_top_search_word").focus();
+          return;
+        }
+
+        // 검색어의 특수 기호 체크
+        if (hasSpecialCharacter(search_word)) {
+          alert("검색어에 특수문자는 올수없습니다.");
+          $("#id_top_search_word").focus();
+          return;
+        }
+
+        f.query_word.value = MakeBSquery(search_word);
+        f.submit();
+      }
+
+      function goTopPopSearch(_search_word) {
+        var f = document.searchTopForm;
+        f.group_code.value = "";
+        f.search_word.value = _search_word;
+
+        $("#id_top_search_word").removeClass("search_input");
+        $("#id_top_search_word").addClass("search_input_on");
+        goTopSearch();
+      }
+
+      var jsLangSite = function() {
+        var subUrl = location.href;
+        var EURL =
+          "http://trans.yongin.go.kr:7000/etgi/gov/yongin/english.html?url=";
+        var CURL =
+          "http://trans.yongin.go.kr:7000/etgi/gov/yongin/chinese.html?url=";
+        var JURL =
+          "http://trans.yongin.go.kr:7000/etgi/gov/yongin/japanese.html?url=";
+        if ($("#searchKey").val() == "0") {
+          window.open(EURL + subUrl, "WebTrans", "");
+        } else if ($("#searchKey").val() == "1") {
+          window.open(CURL + subUrl, "WebTrans", "");
+        } else if ($("#searchKey").val() == "2") {
+          window.open(JURL + subUrl, "WebTrans", "");
+        }
+      };
+
+      var onPopup = function() {
+        window.open(
+          "http://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do",
+          "pop1",
+          "width=889, height=724, top=50, left=100"
+        );
+      };
+
+      function fncToGnb() {
+        console.log(
+          $(".clr.gnb_wrap li")
+            .eq(0)
+            .find("a")
+            .eq(0)
+            .html()
+        );
+        $(".clr.gnb_wrap li")
+          .eq(0)
+          .find("a")
+          .eq(0)
+          .focus();
+      }
+    </script>
+    <script type="text/javascript">
+      var _bwa = [];
+      _bwa.push([
+        "setCollectorUrl",
+        "https://www.zesinc.co.kr/api/collector/yongin"
+      ]);
+      _bwa.push(["setCustomerId", "yongin"]);
+      var d = document,
+        g = d.createElement("script"),
+        s = d.getElementsByTagName("script")[0];
+      g.type = "text/javascript";
+      g.src = "/resources/common/js/blueworksWebAgent-2.0-min.js";
+      g.async = g.defer = true;
+      s.parentNode.insertBefore(g, s);
+    </script>
+
+    <script
+      type="text/javascript"
+      src="/resources/openworks4/js/openworks.ui.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/resources/openworks4/js/openworks.form.js"
+    ></script>
+
+    <!-- 기능별 스크립트 삽입 부 -->
+    <script type="text/javascript" src="/resources/user/bbs/js/bbs.js"></script>
+
+    <script type="text/javascript">
+      //<![CDATA[
+
+      /* 공통 초기화 기능 */
+      $(document).ready(function() {
+        try {
+          var caption =
+            $(document)
+              .find("table")
+              .find("caption")
+              .text()
+              .trim() + "게시판으로 ";
+          $(document)
+            .find("thead")
+            .find("th")
+            .each(function(i) {
+              if (i > 0) {
+                caption += ",";
+              }
+              caption += $(this)
+                .text()
+                .trim();
+            });
+          $(document)
+            .find("table caption")
+            .text(caption + " 정보를 제공합니다.");
+        } catch (e) {}
+      });
+      //]]>
+    </script>
+
+    <script type="text/javascript">
+      var anlzSessionId =
+        "oNDHBUr8je68Nqh3DVNqavIS8QrSC7u1HtRork0AOU0q6P3jyFoUQvCkIlJYa3jK.yonginwas2_servlet_engine3";
+      var anlzClientIp = "121.135.104.201";
+      var anlzMenuCode = "yiNwNews02";
+    </script>
+    <script
+      type="text/javascript"
+      src="/resources/openworks4/js/analyze/tracker.js"
+    ></script>
+  </head>
+
+  <body>
+    <!-- allWarpper // -->
+    <div id="allWarpper">
+      <!-- 용인소식 -->
+
+      <div id="wrap">
+        <div id="skipNavi">
+          <!-- <a href="#container">본문바로가기</a> -->
+          <a href="#contents">본문바로가기</a
+          ><!-- 20190626 웹접근성 수정 -->
+          <a href="javascript:fncToGnb();">메뉴바로가기</a>
+        </div>
+        <!-- header {-->
+        <div id="header" class="sub_header">
+          <h1 class="sdonly">
+            용인시청 메인페이지
+          </h1>
+
+          <div class="top_menu clr">
+            <div class="inner">
+              <ul class="top_left_menu">
+                <li class="magnify">
+                  <ul>
+                    <li class="txt_plus">
+                      <a class="js-zoomin" href="javascript:;"
+                        ><img
+                          src="/resources/user/main/img/txt_plus_icon.png"
+                          alt="글자크기 확대"
+                      /></a>
+                    </li>
+                    <li>
+                      <p>
+                        글자크기
+                      </p>
+                    </li>
+                    <li class="txt_minus">
+                      <a class="js-zoomout" href="javascript:;"
+                        ><img
+                          src="/resources/user/main/img/txt_minus_icon.png"
+                          alt="글자크기 축소"
+                      /></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="btn_print">
+                  <a href="#" onclick="jsDivPirnt(); return false;"
+                    >프린트하기</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://iyongin.or.kr/"
+                    target="_blank"
+                    title="용인시의회 새창열림"
+                    >용인시의회</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/tour/index.do"
+                    target="_blank"
+                    title="투어용인 새창열림"
+                    >투어용인</a
+                  >
+                </li>
+              </ul>
+
+              <div class="top_right_menu">
+                <ul class="clr">
+                  <li>
+                    <a
+                      href="https://www.yongin.go.kr/login/BD_login.do"
+                      title="로그인 화면 이동"
+                      >로그인</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.yongin.go.kr/user/join/BD_userTypeChoose.do"
+                      title="회원가입 화면 이동"
+                      >회원가입</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/web/sub/sitemap.do"
+                      title="사이트맵 화면 이동"
+                      >사이트맵</a
+                    >
+                  </li>
+                </ul>
+                <div class="select_lang">
+                  <div>
+                    <label class="sdonly" for="searchKey">다국어 선택</label>
+                    <select name="searchKey" id="searchKey" title="다국어 선택">
+                      <option value="">한국어</option>
+                      <option value="0">영어</option>
+                      <option value="1">중국어</option>
+                      <option value="2">일본어</option>
+                    </select>
+                    <button
+                      class="btn_lang"
+                      type="button"
+                      onclick="jsLangSite()"
+                    >
+                      <img
+                        src="/resources/user/main/img/btn_lang.png"
+                        alt="GO"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="search_area">
+            <form
+              name="searchTopForm"
+              method="post"
+              onsubmit="return false;"
+              action="/user/web/search/search.do"
+            >
+              <input type="hidden" name="group_code" id="id_top_group_code" />
+              <input type="hidden" name="query_word" />
+
+              <div class="inner">
+                <div class="logo">
+                  <a href="https://www.yongin.go.kr/index.do" title="용인시청"
+                    ><img
+                      src="/resources/user/main/images/main/logo.png"
+                      alt="용인시 로고"
+                  /></a>
+                </div>
+
+                <!-- 검색영역 // -->
+                <div class="searchbar">
+                  <div>
+                    <label class="sdonly" for="h_search">검색</label>
+                    <select id="h_search">
+                      <option value="00">통합검색</option>
+                      <option value="05">직원/업무</option>
+                    </select>
+                    <input type="hidden" id="testUserId" value="" />
+                    <label class="sdonly" for="id_top_search_word"
+                      >검색내용</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="검색어를 입력하세요"
+                      id="id_top_search_word"
+                      name="search_word"
+                      value=""
+                      onkeyup="if (event.keyCode == 13) goTopSearch();"
+                    />
+                    <button type="button" onclick="goTopSearch();">
+                      <img
+                        src="/resources/user/main/img/btn_searchbar.png"
+                        alt="검색하기"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <!-- // 검색영역  -->
+              </div>
+            </form>
+          </div>
+
+          <!-- gnb {-->
+          <div id="gnb">
+            <h1 class="sdonly">
+              용인시청 메뉴
+            </h1>
+            <ul class="clr gnb_wrap">
+              <li>
+                <a href="#none">용인소식</a>
+                <ul class="gnb_menu gnb_menu01">
+                  <li class="gnb_W">
+                    <ul>
+                      <li class="gnb_menu_title">
+                        <h3>
+                          용인소식
+                        </h3>
+                        <p>용인의 시정정보와<br />새로운소식</p>
+                        <img
+                          src="/resources/user/main/images/main/gnb_img01.jpg"
+                          alt=""
+                        />
+                      </li>
+                      <!--gnb_menu_title END-->
+                      <li class="gnb_menu_wrap">
+                        <ul>
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=1"
+                              >새소식</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=1"
+                                  >시정소식</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/newsApi/BD_selectNewsApiList.do"
+                                  >도정소식</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1020"
+                                  >보도자료</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/event/BD_selectClturEventPfmcList.do?q_clCode=1"
+                                  >문화행사/공연</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/empmntestinfo/BD_selectEmpmnTestInfoList.do?q_menu=1"
+                                  >채용/시험정보</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1091"
+                                  >사서가 추천하는 도서</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/home/yiNw/yiNwStable/yiNwStable01/yiNwStable01_01.jsp"
+                              >입법예고/공고</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/home/yiNw/yiNwStable/yiNwStable01/yiNwStable01_01.jsp"
+                                  >입법예고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/yiNw/yiNwStable/yiNwStable02/yiNwStable02_01.jsp"
+                                  >고시공고</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/home/yiNw/yiNwInfo/yiNwInfo01/yiNwInfo01_01.jsp"
+                              >입찰계약정보</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/home/yiNw/yiNwInfo/yiNwInfo01/yiNwInfo01_01.jsp"
+                                  >입찰공고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=3"
+                                  >수의계약내역 공개방</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="http://contract.yongin.go.kr/"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >용인시 계약정보공개 시스템</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#none">민원안내</a>
+                <ul class="gnb_menu gnb_menu02">
+                  <li class="gnb_W">
+                    <ul>
+                      <li class="gnb_menu_title">
+                        <h3>
+                          민원안내
+                        </h3>
+                        <p>편리한<br />민원행정서비스</p>
+                        <img
+                          src="/resources/user/main/images/main/gnb_img02.jpg"
+                          alt=""
+                        />
+                      </li>
+                      <!--gnb_menu_title END-->
+                      <li class="gnb_menu_wrap">
+                        <ul>
+                          <li class="gnb_menu_l">
+                            <a href="/home/cvIf/cvIfTotal/cvIfTotal02.jsp"
+                              >종합민원안내</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a href="/home/cvIf/cvIfTotal/cvIfTotal02.jsp"
+                                  >무인민원발급창구안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfTotal/cvIfTotal03.jsp"
+                                  >어디서나민원안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/cvIf/cvIfTotal/cvIfTotal04/cvIfTotal04_01.jsp"
+                                  >주민등록민원안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/cvIf/cvIfTotal/cvIfTotal01/cvIfTotal01_01.jsp"
+                                  >민원1회 방문제</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfTotal/cvIfTotal05.jsp"
+                                  >군부대 민원안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/cvIf/cvIfTotal/cvIfTotal06/cvIfTotal06_01.jsp"
+                                  >정보통신공사 사용전검사</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/cvIf/cvIfTotal/cvIfTotal09/cvIfTotal09_02.jsp"
+                                  >공공요금 모아보기</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfTotal/cvIfTotal14.jsp"
+                                  >해피 민원창구 운영</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfTotal/cvIfTotal12.jsp"
+                                  >민원안내 콜센터</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/home/cvIf/taxIf/taxIf01/taxIf01_01.jsp"
+                              >세금정보</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/home/cvIf/taxIf/taxIf01/taxIf01_01.jsp"
+                                  >지방세</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/cvIf/taxIf/taxIf02/taxIf02_01.jsp"
+                                  >세외수입</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/cvIf/taxIf/taxIf03/taxIf03_01.jsp"
+                                  >납부안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="https://tax.yongin.go.kr"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >세금납부시스템</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/home/cvIf/cvIfPasspt/cvIfPasspt03.jsp"
+                              >여권사무</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a href="/home/cvIf/cvIfPasspt/cvIfPasspt03.jsp"
+                                  >여권민원실 안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfPasspt/cvIfPasspt01.jsp"
+                                  >여권개요 및 유의사항</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfPasspt/cvIfPasspt02.jsp"
+                                  >여권사진 규정 안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfPasspt/cvIfPasspt04.jsp"
+                                  >여권구비서류</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfPasspt/cvIfPasspt05.jsp"
+                                  >여권발급수수료</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfPasspt/cvIfPasspt06.jsp"
+                                  >여권수령방법 및 여권 발급기한</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfPasspt/cvIfPasspt07.jsp"
+                                  >여권보관, 반납 및 습득</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="http://www.passport.go.kr/issue/document.php"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >여권신청 관련서식</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfPasspt/cvIfPasspt09.jsp"
+                                  >목요 야간여권민원실</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/home/cvIf/cvIfFormGroup/cvIfManl.jsp"
+                              >민원편람/서식</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a href="/home/cvIf/cvIfFormGroup/cvIfManl.jsp"
+                                  >민원편람</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1025&q_clCode=1"
+                                  >민원서식</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/user/web/yicvplReq/BD_selectYicvplReq.do"
+                              >민원신청</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/user/web/yicvplReq/BD_selectYicvplReq.do"
+                                  >민원신청</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfElec/cvIfElec02.jsp"
+                                  >민원24</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/cvIf/cvIfElec/cvIfElec03.jsp"
+                                  >온라인 행정심판청구</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="https://safetyreport.go.kr"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >안전신문고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/cvplcnsltresv/BD_insertCvplCnsltResvForm.do"
+                                  >민원사전상담/예약</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#none">정보공개</a>
+                <ul class="gnb_menu gnb_menu03">
+                  <li class="gnb_W">
+                    <ul>
+                      <li class="gnb_menu_title">
+                        <h3>
+                          정보공개
+                        </h3>
+                        <p>국민의 알권리충족<br />공공정보 공개</p>
+                        <img
+                          src="/resources/user/main/images/main/gnb_img03.jpg"
+                          alt=""
+                        />
+                      </li>
+                      <!--gnb_menu_title END-->
+                      <li class="gnb_menu_wrap">
+                        <ul>
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=4"
+                              >시정정보</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=4"
+                                  >용인시보</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpReci/ifOpReci02.jsp"
+                                  >용인시정백서</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpReci/ifOpReci04.jsp"
+                                  >용인시 주요업무보고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/resources/download/web/201605040928_yongin_jungjanggi_sijeongunyeong(2016-2018).zip"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >중기 시정운영 계획</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="http://www.jachilaw.com/yongin2/"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >자치법규</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/ifOp/ifOpReci/ifOpReci06/ifOpReci06_01.jsp"
+                                  >정책실명제</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpReci/ifOpReci10.jsp"
+                                  >달라지는 행정제도</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/user/web/publict/BD_selectPublictList.do"
+                              >행정정보공개</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/user/web/publict/BD_selectPublictList.do"
+                                  >사전정보공표</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpAdm/ifOpAdm01.jsp"
+                                  >정보공개제도</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="https://www.open.go.kr/"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >정보공개청구 바로가기</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpAdm/ifOpAdm02.jsp"
+                                  >비공개 대상정보 세부기준</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/ifOp/ifOpAdm/ifOpAdm07/ifOpAdm07_01.jsp"
+                                  >공공데이터개방</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="http://www.localdata.kr/"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >지방행정데이터개방</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/ifOp/ifOpAdm/ifOpAdm09/ifOpAdm09_01.jsp"
+                                  >공유재산정보공개</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=16"
+                                  >업무추진비공개</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1086"
+                                  >인허가 처리 이력</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpAdm/ifOpAdm13.jsp"
+                                  >조직운영 핵심지표(5대) 공개</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/servcTask/BD_selectServcTaskList.do"
+                                  >용역과제 결과공개</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1100"
+                                  >개인정보 위탁현황</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1101"
+                                  >개인정보 목적외 이용 및 제3자 제공</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/home/ifOp/ifOpMunic/ifOpMunic01.jsp"
+                              >재정운영현황</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a href="/home/ifOp/ifOpMunic/ifOpMunic01.jsp"
+                                  >예산서 안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpMunic/ifOpMunic02.jsp"
+                                  >예산서공개</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpMunic/ifOpMunic03.jsp"
+                                  >결산서공개</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=8"
+                                  >재정공시</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpMunic/ifOpMunic05.jsp"
+                                  >중기지방재정계획</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpMunic/ifOpMunic06.jsp"
+                                  >지방재정투자사업</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="http://financeopen.yongin.go.kr"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >세입세출예산공개</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1095"
+                                  >기금운용계획</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1084"
+                                  >채무관리계획</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpMunic/ifOpMunic08.jsp"
+                                  >예산 성과계획서</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1093"
+                              >감사</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1093"
+                                  >열린감사</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=10"
+                                  >청렴용인</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/home/ifOp/ifOpPubl/ifOpPubl01/ifOpPubl01_01.jsp"
+                              >공공시설물 예약</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/home/ifOp/ifOpPubl/ifOpPubl01/ifOpPubl01_01.jsp"
+                                  >컨벤션홀</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpPubl/ifOpPubl02.jsp"
+                                  >시청사 1층광장</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/ifOp/ifOpPubl/ifOpPubl03.jsp"
+                                  >체육시설예약</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#none">시민참여</a>
+                <ul class="gnb_menu gnb_menu04">
+                  <li class="gnb_W">
+                    <ul>
+                      <li class="gnb_menu_title">
+                        <h3>
+                          시민참여
+                        </h3>
+                        <p>시민의, 시민을 위한<br />소통광장</p>
+                        <img
+                          src="/resources/user/main/images/main/gnb_img04.jpg"
+                          alt=""
+                        />
+                      </li>
+                      <!--gnb_menu_title END-->
+                      <li class="gnb_menu_wrap">
+                        <ul>
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/home/civlPtc/civlPtcRegs/civlPtcRegs02.jsp"
+                              >시민신고센터</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs02.jsp"
+                                  >칭찬합니다</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs10.jsp"
+                                  >불법 사금융 피해 신고센터
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs01.jsp"
+                                  >공직자부조리신고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="http://www.foodsafetykorea.go.kr/minwon/complain/customerNotify.do?menu_no=621&menu_grp=MENU_GRP24"
+                                  target="_blank"
+                                  title="새창으로 이동합니다."
+                                  >부정불량식품신고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs04/civlPtcRegs04_01.jsp"
+                                  >예산낭비신고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs05.jsp"
+                                  >부동산불법중개행위신고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs09.jsp"
+                                  >부동산불법거래신고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs06/civlPtcRegs06_01.jsp"
+                                  >공익신고센터</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs07/civlPtcRegs07_01.jsp"
+                                  >민원모니터</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs08/civlPtcRegs08_01.jsp"
+                                  >청렴시민감사관</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs11.jsp"
+                                  >청탁금지법 신고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs14.jsp"
+                                  >지방세 탈루/체납자의 은닉재산 신고</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRegs/civlPtcRegs15/civlPtcRegs15_01.jsp"
+                                  >옴부즈만 게시판</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/home/civlPtc/civlPtcBudg/civlPtcBudg02.jsp"
+                              >주민참여예산</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcBudg/civlPtcBudg02.jsp"
+                                  >제도안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcBudg/civlPtcBudg03/civlPtcBudg03_01.jsp"
+                                  >운영계획</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcBudg/civlPtcBudg04.jsp"
+                                  >관련법령</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcBudg/civlPtcBudg05/civlPtcBudg05_01.jsp"
+                                  >주민참여예산기구</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1037&q_clCode=2"
+                                  >주민참여예산 토론방</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1057&q_clCode=4"
+                                  >예산편성에 바란다</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcBudg/civlPtcBudg08/civlPtcBudg08_01.jsp"
+                                  >예산의이해</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/realmacctoedc/BD_selectRealmAcctoEdcList.do?q_edcSeCode=1001"
+                                  >예산학교신청</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=11"
+                                  >공지사항</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1025&q_clCode=5"
+                                  >자료실</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/user/web/proposal/BD_selectProposalReq.do"
+                              >시민제안/토론</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/user/web/proposal/BD_selectProposalReq.do"
+                                  >시민제안</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/qestnar/BD_selectQestnarList.do?q_realmCode=ctznPropse"
+                                  >설문조사</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1037&q_clCode=1"
+                                  >자유발언대</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/user/web/schooluniform/BD_selectHighSchoolUniformList.do"
+                              >온라인신청접수</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/user/web/schooluniform/BD_selectHighSchoolUniformList.do"
+                                  >교복지원금 신청</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/radondetector/BD_selectRadonDetectorList.do"
+                                  >실내 라돈측정기 대여신청</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/personalityCamp/BD_selectPersonalityCamp.do"
+                                  >인성캠프</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a
+                              href="/home/civlPtc/civlPtcRform/civlPtcRform01.jsp"
+                              >규제개혁</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRform/civlPtcRform01.jsp"
+                                  >규제개혁이란</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/web/admnsreglofck/BD_selectAdmnsReglOfckList.do"
+                                  >행정규제등록현황</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/civlPtc/civlPtcRform/civlPtcRform02.jsp"
+                                  >용인시규제신고센터</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1025&q_clCode=3"
+                                  >알림 및 자료실</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#none">용인소개</a>
+                <ul class="gnb_menu gnb_menu05">
+                  <li class="gnb_W">
+                    <ul>
+                      <li class="gnb_menu_title">
+                        <h3>
+                          용인소개
+                        </h3>
+                        <p>사람중심,<br />새로운 용인</p>
+                        <img
+                          src="/resources/user/main/images/main/gnb_img05.jpg"
+                          alt=""
+                        />
+                      </li>
+                      <!--gnb_menu_title END-->
+                      <li class="gnb_menu_wrap">
+                        <ul>
+                          <li class="gnb_menu_l">
+                            <a href="/common/orgcht/BD_orgcht.do?q_domainCode=1"
+                              >시청안내</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a
+                                  href="/common/orgcht/BD_orgcht.do?q_domainCode=1"
+                                  >조직도 및 업무안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfHall/yiIfHall04.jsp"
+                                  >부서별 팩스번호 안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/yiIf/yiIfHall/yiIfHall02/yiIfHall02_01.jsp"
+                                  >청사안내</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfHall/yiIfHall03.jsp"
+                                  >찾아오시는 길</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/home/yiIf/yiIfProd/yiIfProd01.jsp"
+                              >용인시 소개</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd01.jsp"
+                                  >역사</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd02.jsp"
+                                  >연혁</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/yiIf/yiIfProd/yiIfProd03/yiIfProd03_01.jsp"
+                                  >지명유래</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd04.jsp"
+                                  >용인의 상징</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd05.jsp"
+                                  >시민헌장</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd06.jsp"
+                                  >용인애향가</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd07.jsp"
+                                  >행정안내도</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd08.jsp"
+                                  >용인시 CI</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd10.jsp"
+                                  >용인시민카드</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfProd/yiIfProd11.jsp"
+                                  >용인시 관광 홍보대사 판다</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="gnb_menu_l">
+                            <a href="/home/yiIf/yiIfCurSta/yiIfCurSta01.jsp"
+                              >용인시현황</a
+                            >
+                          </li>
+                          <li class="gnb_menu_s">
+                            <ul>
+                              <li>
+                                <a href="/home/yiIf/yiIfCurSta/yiIfCurSta01.jsp"
+                                  >기본현황</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfCurSta/yiIfCurSta02.jsp"
+                                  >재정규모</a
+                                >
+                              </li>
+
+                              <li>
+                                <a href="/home/yiIf/yiIfCurSta/yiIfCurSta03.jsp"
+                                  >지역특성</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/yiIf/yiIfCurSta/yiIfCurSta04/yiIfCurSta04_01.jsp"
+                                  >문화재현황</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/yiIf/yiIfCurSta/yiIfAward/yiIfAward17.jsp"
+                                  >수상내역</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/yiIf/yiIfCurSta/yiIfAllian02/yiIfAllian02_01.jsp"
+                                  >자매도시(국내)</a
+                                >
+                              </li>
+
+                              <li>
+                                <a
+                                  href="/home/yiIf/yiIfAllian/yiIfAllian01/yiIfAllian01_01.jsp"
+                                  >자매도시(해외)</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- } gnb -->
+
+          <!-- 20190923 반려동물 추가 -->
+          <div class="field_info">
+            <div class="inner">
+              <!-- <h2><img src="https://www.yongin.go.kr/resources/user/main/images/main/h2_field_info.png" alt="분야별 정보"></h2> -->
+              <ul class="clr">
+                <li>
+                  <a
+                    href="/home/www/www01/www01_01/www01_01_02/www01_01_02_01.jsp"
+                    >복지</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/home/www/www_05/www_05_01/www_05_01_09/www_05_01_09_01.jsp"
+                    >일자리</a
+                  >
+                </li>
+                <li>
+                  <a href="/edu/index.do" target="_blank">교육</a>
+                </li>
+                <li>
+                  <a href="https://tax.yongin.go.kr/" target="_blank">세금</a>
+                </li>
+                <li>
+                  <a
+                    href="/home/www/www08/www08_01/www08_01_01/www08_01_01_01.jsp"
+                    >경제</a
+                  >
+                </li>
+                <li>
+                  <a href="/home/www/www09/www09_01/www09_01_01.jsp">도시</a>
+                </li>
+                <li>
+                  <a
+                    href="/home/www/www07/www07_01/www07_01_01/www07_01_01_01.jsp"
+                    >교통</a
+                  >
+                </li>
+                <li>
+                  <a href="/home/www/www10/www10_01/www10_01_01.jsp">민방위</a>
+                </li>
+                <li>
+                  <a
+                    href="/home/www/www11/www11_01/www11_01_01/www11_01_01_01.jsp"
+                    >안전</a
+                  >
+                </li>
+                <li>
+                  <a href="/home/www/www12/www12_01/www12_01_01.jsp"
+                    >환경/녹지</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1011&q_clCode=1"
+                    >위생/보건</a
+                  >
+                </li>
+                <li>
+                  <a href="/estat/index.do" target="_blank">통계</a>
+                </li>
+                <li>
+                  <a href="/home/www/www15/www15_01/www15_01_01.jsp"
+                    >반려동물</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--  // 분야별정보 영역 -->
+        </div>
+        <!-- } header -->
+
+        <!-- // header-->
+
+        <!-- [반응형] 모바일 헤더 -->
+        <header id="m_header">
+          <h1 id="m_logo">
+            <a href="https://m.yongin.go.kr/m/index.do"
+              ><img src="/resources/user/mobile/images/logo.png" alt="용인시"
+            /></a>
+          </h1>
+          <a href="#allmenu" id="btn_allmenu" role="button">전체메뉴</a>
+          <nav id="allmenu">
+            <span class="bg"></span>
+            <ul>
+              <li>
+                <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1020">시정</a>
+                <ul>
+                  <li>
+                    <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1020"
+                      >용인시정</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1020"
+                          >보도자료</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=1"
+                          >시정소식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/empmntestinfo/BD_selectEmpmnTestInfoList.do?q_menu=1"
+                          >채용/시험정보</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/yiNw/yiNwStable/yiNwStable02/yiNwStable02_01.jsp"
+                          >고시공고</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/yiNw/yiNwInfo/yiNwInfo01/yiNwInfo01_01.jsp"
+                          >입찰공고</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/common/orgcht/BD_selectOrgList.do?q_domainCode=1"
+                      >시정안내</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/common/orgcht/BD_selectOrgList.do?q_domainCode=1"
+                          >부서직원안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/yiIf/yiIfHall/yiIfHall02/yiIfHall02_01.jsp"
+                          >청사안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/yiIf/yiIfHall/yiIfHall03.jsp"
+                          >찾아오시는길</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/mayor/jcmIf/jcmIfGrg.jsp">시민시장실</a>
+
+                    <ul>
+                      <li>
+                        <a href="/home/mayor/jcmIf/jcmIfGrg.jsp">인사말</a>
+                      </li>
+
+                      <li>
+                        <a href="/home/mayor/jcmIf/jcmIfPrf.jsp">프로필</a>
+                      </li>
+
+                      <li>
+                        <a href="/home/mayor/jcmIf/jcmIfWd/jcmIfWd03.jsp"
+                          >2019 신년사</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/mayor/jcmIf/jcmIfWd/jcmIfWd04.jsp"
+                          >2019 시정연설</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/mayor/jcmIf/jcmIfWd/jcmIfWd02.jsp"
+                          >2018 송년사</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/mayor/jcmIf/jcmIfWd/jcmIfWd01.jsp"
+                          >취임사</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1021"
+                          >포토갤러리</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/mayor/pldbusi/pld_tg.jsp"
+                          >시정비전·목표</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1114"
+                          >현장시정활동</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/mayor/pldbusi/pld_str.jsp"
+                          >전략별 공약사업</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://m.epeople.go.kr">민원안내</a>
+                <ul>
+                  <li>
+                    <a
+                      href="https://m.epeople.go.kr"
+                      target="_blank"
+                      title="새창으로 이동합니다."
+                      >민원신청</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="/home/cvIf/cvIfPasspt/cvIfPasspt01.jsp"
+                      >종합민원안내</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/home/cvIf/cvIfPasspt/cvIfPasspt01.jsp"
+                          >여권민원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/cvIf/cvIfTotal/cvIfTotal02.jsp"
+                          >무인민원발급안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/cvIf/cvIfTotal/cvIfTotal09/cvIfTotal09_02.jsp"
+                          >공공요금 모아보기</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/www/www12/www12_03/www12_03_02.jsp"
+                      >대형폐기물</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/home/www/www12/www12_03/www12_03_02.jsp"
+                          >대형폐기물배출 이용안내 및 배출신청방법</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/lgzWste/wsteExhstReq/BD_insertWsteExhstReqForm.do?exhstTyCode=RESERVE"
+                          >결제하기</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/cvIf/taxIf/taxIf01/taxIf01_01.jsp"
+                      >세금정보</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/home/cvIf/taxIf/taxIf01/taxIf01_01.jsp"
+                          >지방세</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/cvIf/taxIf/taxIf02/taxIf02_01.jsp"
+                          >세외수입</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/cvIf/taxIf/taxIf03/taxIf03_01.jsp"
+                          >납부안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="https://tax.yongin.go.kr/"> 세금납부시스템</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a
+                  href="/home/www/www03/www03_02/www03_02_06/www03_02_06_01.jsp"
+                  >보건/복지</a
+                >
+                <ul>
+                  <li>
+                    <a
+                      href="/home/www/www03/www03_02/www03_02_06/www03_02_06_01.jsp"
+                      >예방접종</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/www/www03/www03_02/www03_02_06/www03_02_06_01.jsp"
+                          >영유아 예방접종</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www03/www03_02/www03_02_06/www03_02_06_02.jsp"
+                          >성인예방접종</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www03/www03_02/www03_02_06/www03_02_06_03.jsp"
+                          >예방접종전후 주의사항</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/www/www03/www03_02/www03_02_07/www03_02_07_01.jsp"
+                      >모성건강</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/www/www03/www03_02/www03_02_07/www03_02_07_01.jsp"
+                          >임산부건강관리</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www03/www03_02/www03_02_07/www03_02_07_02.jsp"
+                          >건강태교프로그램</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www03/www03_02/www03_02_07/www03_02_07_03.jsp"
+                          >산모,신생아 건강관리사지원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www03/www03_02/www03_02_07/www03_02_07_04.jsp"
+                          >고위험 임산부의료비지원</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/www/www01/www01_01/www01_01_04/www01_01_04_01.jsp"
+                      >복지시설</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/www/www01/www01_01/www01_01_04/www01_01_04_01.jsp"
+                          >처인구</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www01/www01_01/www01_01_04/www01_01_04_02.jsp"
+                          >기흥구</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www01/www01_01/www01_01_04/www01_01_04_03.jsp"
+                          >수지구</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/user/web/prkstop/BD_selectRegltInquiry.do">교통</a>
+                <ul>
+                  <li>
+                    <a href="/user/web/prkstop/BD_selectRegltInquiry.do"
+                      >주정차단속</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/user/web/prkstop/BD_selectRegltInquiry.do"
+                          >단속정보조회</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_04/www07_04_01/www07_04_01_05.jsp"
+                          >과태료납부안내</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="http://parkingsms.yongin.go.kr/WizshotCarControl/member/mobile/"
+                      target="_blank"
+                      title="새창으로 이동합니다."
+                      >주정차단속문자알림</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/www/www07/www07_03/www07_03_02/www07_03_02_01.jsp"
+                      >차량등록</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_01.jsp"
+                          >신규등록</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_02.jsp"
+                          >이전등록</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_03.jsp"
+                          >변경등록</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_04.jsp"
+                          >말소등록</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_05.jsp"
+                          >저당권설정/말소등록</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_06.jsp"
+                          >임시운행허가</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_07.jsp"
+                          >자가용화물차 사용신고</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_08.jsp"
+                          >등록증/번호판/봉인 재교부</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_03/www07_03_02/www07_03_02_09.jsp"
+                          >등록원부발급</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/www/www07/www07_02/www07_02_04/www07_02_04_01.jsp"
+                      >용인경전철</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_02/www07_02_04/www07_02_04_01.jsp"
+                          >시스템은</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_02/www07_02_04/www07_02_04_02.jsp"
+                          >도입의 필요성</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_02/www07_02_04/www07_02_04_03.jsp"
+                          >사업추진개요</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_02/www07_02_04/www07_02_04_04.jsp"
+                          >추진현황 및 계획</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_02/www07_02_04/www07_02_04_05.jsp"
+                          >경전철 조감도</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www07/www07_02/www07_02_04/www07_02_04_06.jsp"
+                          >운행계획 및 운임체계</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="https://ever-line.co.kr/"
+                          target="_blank"
+                          title="새창으로 이동합니다."
+                          >용인경량전철주식회사</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="http://www.gbis.go.kr/service/busInfo/metroBus.action?cmd=searchMetroCenter&centerId=4111000000"
+                      target="_blank"
+                      title="새창으로 이동합니다."
+                      >버스정보</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="/home/www/www07/www07_04/www07_02_08.jsp"
+                      >공영주차장</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/m/ygmn.jsp">청년</a>
+                <ul>
+                  <li>
+                    <a
+                      href="/home/www/www01/www01_09/www01_09_01/www01_09_01_03.jsp"
+                      >청년정책</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/www/www01/www01_09/www01_09_01/www01_09_01_03.jsp"
+                          >일반현황</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/m/ygmn/ygmn01/ygmn01_02.jsp">청년정책</a>
+                      </li>
+
+                      <li>
+                        <a href="/m/ygmn/ygmn01/ygmn01_03.jsp">관련사업</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/www/www01/www01_09/www01_09_02/www01_09_02_01.jsp"
+                      >취업지원</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/www/www01/www01_09/www01_09_02/www01_09_02_01.jsp"
+                          >청년기본소득(청년배당)</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/interviewsuite/BD_selectInterviewSuiteList.do?category=youth"
+                          >용인청년 희망옷장</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www01/www01_09/www01_09_02/www01_09_02_03/www01_09_02_03_01.jsp"
+                          >일자리</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1115"
+                      >청년소식</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/edu/index.do">교육포털</a>
+                <ul>
+                  <li>
+                    <a href="/home/edu/www13_01/www13_01_01.jsp"
+                      >용인시 교육 비전</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/home/edu/www13_01/www13_01_01.jsp"
+                          >용인 혁신교육</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/edu/www13_01/www13_01_02.jsp"
+                          >사람중심 학습도시 용인</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/edu/www13_06/www13_06_01.jsp"
+                      >혁신교육 사업</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/home/edu/www13_06/www13_06_01.jsp"
+                          >지역특색 교육도시 모델 구축</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/edu/www13_06/www13_06_02.jsp"
+                          >지역사회 교육인프라 구축</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/edu/www13_06/www13_06_03.jsp"
+                          >지역교육공동체 구축</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/edu/www13_02/www13_02_06.jsp"
+                      >학교교육 지원</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/home/edu/www13_02/www13_02_06.jsp"
+                          >학교 시설 지원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/edu/www13_02/www13_02_07.jsp"
+                          >학교 프로그램 지원</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/edu/www13_03/www13_03_01.jsp">청소년 지원</a>
+
+                    <ul>
+                      <li>
+                        <a href="/home/edu/www13_03/www13_03_01.jsp"
+                          >청소년 역량강화 및 참여 활성화</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/edu/www13_03/www13_03_02.jsp"
+                          >청소년 복지 및 자립지원 강화</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/edu/www13_03/www13_03_03.jsp"
+                          >청소년 친화적 지역사회 환경 조성</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/edu/www13_03/www13_03_04.jsp"
+                          >청소년 지원 인프라 확충</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="http://www.nyhc.or.kr/IndexServlet"
+                          target="_blank"
+                          title="새창으로 이동합니다."
+                          >관내 청소년 시설</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/edu/institutionNLecture/lctrs/BD_selectCteduLctrsList.do"
+                      >시민평생교육</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/edu/institutionNLecture/lctrs/BD_selectCteduLctrsList.do"
+                          >강좌안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/edu/institutionNLecture/lctrs/institutionInfo.jsp"
+                          >기관안내</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/web/programManagement/BD_selectProgramManagementDreamSafetyRoomView.do"
+                      >안전체험교육</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/user/web/programManagement/BD_selectProgramManagementDreamSafetyRoomView.do"
+                          >꿈이룸체험교실</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/programManagement/BD_selectProgramManagementDreamSafetyBusView.do"
+                          >찾아가는안전체험</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a
+                  href="/user/web/event/BD_selectClturEventPfmcList.do?q_clCode=2"
+                  >투어용인</a
+                >
+                <ul>
+                  <li>
+                    <a
+                      href="/user/web/event/BD_selectClturEventPfmcList.do?q_clCode=2"
+                      >행사/축제</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=1"
+                      >용인농촌테마파크</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=1"
+                          >관광지소개</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=1&q_tsn2=1"
+                          >체험관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=1&q_tsn2=2"
+                          >농경문화전시관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=1&q_tsn2=3"
+                          >경관농업단지</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=1&q_tsn2=4"
+                          >이용안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=1&q_tsn2=5"
+                          >찾아오시는길</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/trAt/trAtFmVill/trAtFmVill07/trAtFmTheme08/trAtFmTheme08_01/trAtFmTheme08/trAtFmTheme08_01/trAtFmTheme02.jsp"
+                          >용인농촌테마파크시설안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/fvtpexprnprgm/BD_groupFvtpExprnPrgmList.do"
+                          >용인농촌테마파크예약하기</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=1001"
+                      >가보고싶은곳</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=2"
+                          >에버랜드</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=3"
+                          >캐리비안베이</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=4"
+                          >한국민속촌</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=5"
+                          >용인자연휴양림</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=6"
+                          >한택식물원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=7"
+                          >용인 대장금파크</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=8"
+                          >와우정사</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/tour/trAt/trAtRecoCs.jsp">추천여행코스</a>
+
+                    <ul>
+                      <li>
+                        <a href="/home/tour/trAt/trAtRecoCs/trAtRecoCs01.jsp"
+                          >데이트</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtRecoCs/trAtRecoCs02.jsp"
+                          >가족여행</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtRecoCs/trAtRecoCs03.jsp"
+                          >우정여행</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtRecoCs/trAtRecoCs04.jsp"
+                          >체험여행</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtRecoCs/trAtRecoCs05.jsp"
+                          >힐링여행</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtRecoCs/trAtRecoCs06.jsp"
+                          >역사여행</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtRecoCs/trAtRecoCs07.jsp"
+                          >테마여행</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtRecoCs/trAtRecoCs08.jsp"
+                          >문학기행</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=1002"
+                      >이색명소</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=9"
+                          >보정동카페거리</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=10"
+                          >용인중앙시장머뭄카페</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=2010"
+                      >축제</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=29"
+                          >시민의날축제</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=30"
+                          >용인포에버벚꽃축제</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=31"
+                          >포은문화제</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=32"
+                          >거리축제</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=33"
+                          >음식문화축제</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=34"
+                          >사이버과학축제</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=35"
+                          >평생학습축제</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=1003"
+                      >용인8경</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=11"
+                          >석성산일출</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=12"
+                          >광교산사계</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=13"
+                          >기흥호수공원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=14"
+                          >용인농촌테마파크와연꽃단지</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=15"
+                          >용인자연휴양림</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=16"
+                          >조비산조망</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=17"
+                          >가실벚꽃</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=18"
+                          >어비낙조</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/tour/trAt/trAtFmVill/trAtFmVill01.jsp"
+                      >체험농장/마을</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/home/tour/trAt/trAtFmVill/trAtFmVill01.jsp"
+                          >용인농촌체험관광소개</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtFmVill/trAtFmVill02.jsp"
+                          >용인농촌체험관광연구회</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/exTrv/trAtFmVill/trAtFmVill_03.jsp"
+                          >농촌체험마을</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtFmVill/trAtFmVill04.jsp"
+                          >농촌교육농장(에듀팜)</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/trAt/trAtFmTheme/trAtFmVill07/trAtFmVill05.jsp"
+                          >농촌체험농장</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/fvtpexprnprgm/BD_farmFvtpExprnPrgmList.do"
+                          >농촌체험농장예약하기</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/trAt/trAtFmVill/trAtFmVill07.jsp"
+                          >주말농장</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=21"
+                      >예절교육체험</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=21"
+                          >예절교육관 소개</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/exTrv/exTrvMns/exTrvMns02/exTrvMns02_01.jsp"
+                          >교육프로그램</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/prprtedcprgm/BD_selectPrprtEdcPrgmList.do"
+                          >예약하기</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1087"
+                          >공지사항</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1088"
+                          >교육신청게시판</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/tour/exTrv/exTrvFosrt/exTrvFosrt02/exTrvFosrt02_01.jsp"
+                      >숲/목재문화체험</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/tour/exTrv/exTrvFosrt/exTrvFosrt02/exTrvFosrt02_01.jsp"
+                          >목재문화체험</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/exTrv/exTrvFosrt/exTrvFosrt04/exTrvFosrt04_01.jsp"
+                          >숲해설</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/exTrv/exTrvFosrt/exTrvFosrt03/exTrvFosrt03_04.jsp"
+                          >유아숲체험원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/exTrv/exTrvFosrt/exTrvFosrt08/exTrvFosrt08_01.jsp"
+                          >산림치유</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/frtexprn/BD_selectFrtExprnEdcList.do"
+                          >예약하기</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=2005"
+                      >기타문화체험</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=24"
+                          >경기도국악당</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=25"
+                          >용인포은아트홀</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=26"
+                          >백암도예</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=2001"
+                      >템플스테이</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=19"
+                          >법륜사</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=20"
+                          >화운사</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=77"
+                      >용인힐링여행</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=77"
+                          >등산로</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=78"
+                          >자전거도로</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=79"
+                          >너울길</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=80"
+                          >녹색길</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/tour/exTrv/exTrvLeisu/exTrvLeisu03/exTrvLeisu03_01.jsp"
+                      >레저</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/tour/exTrv/exTrvLeisu/exTrvLeisu03/exTrvLeisu03_01.jsp"
+                          >짚라인</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/exTrv/exTrvLeisu/exTrvLeisu01.jsp"
+                          >골프장</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/home/tour/exTrv/exTrvLeisu/exTrvLeisu04.jsp"
+                          >낚시터</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/exTrv/exTrvLeisu/exTrvLeisu06/exTrvLeisu06_01.jsp"
+                          >플라이스테이션</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/tour/ctiqy/ctiqyGly/ctiqyGly01/ctiqyGly01_01.jsp"
+                      >용인시박물관</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/tour/ctiqy/ctiqyGly/ctiqyGly01/ctiqyGly01_01.jsp"
+                          >용인문화유적전시관소개</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/ctiqy/ctiqyGly/ctiqyGly03/ctiqyGly03_01/ctiqyGly03_01_1.jsp"
+                          >전시안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/tour/ychmedclctr/BD_selectYchmEdcLctrSchedule.do"
+                          >예약및교육/행사안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/ctiqy/ctiqyGly/ctiqyGly05/ctiqyGly05_01.jsp"
+                          >시설안내</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/tour/ctiqy/ctiqyGly/ctiqyGly06/ctiqyGly06_01.jsp"
+                          >자료실</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=3001"
+                      >박물관/미술관</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=37"
+                          >경기도박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=38"
+                          >경기도어린이박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=39"
+                          >백남준아트센터</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=41"
+                          >삼성화재교통박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=42"
+                          >한국등잔박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=44"
+                          >명지대학교박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=45"
+                          >용인대학교박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=46"
+                          >경희대학교혜정박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=47"
+                          >단국대학교석주선기념박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=48"
+                          >예아리박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=49"
+                          >삼의이야기가있는집</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=50"
+                          >호암미술관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=51"
+                          >한국미술관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=52"
+                          >이영미술관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=53"
+                          >신영숙컬렉션박물관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=54"
+                          >마가미술관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=55"
+                          >안젤리미술관</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=3002"
+                      >문화유적</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=56"
+                          >정몽주선생묘</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=57"
+                          >처인성</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=58"
+                          >심곡서원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=59"
+                          >민영환선생묘</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=60"
+                          >용덕사석조여래입상</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=61"
+                          >모현지석묘</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=62"
+                          >충렬서원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=63"
+                          >용인미평리약사여래입상</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=64"
+                          >정조어제채제공선생뇌문비</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=65"
+                          >서봉사현오국사탑비</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=66"
+                          >용인서리고려백자요지</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=67"
+                          >용인한산이씨음애공파고택</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=68"
+                          >양지향교</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=70"
+                          >장욱진가옥</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=71"
+                          >약천남구만묘소</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=87"
+                          >동도사석불좌상</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=3003"
+                      >기타문화탐방</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=72"
+                          >박목월시의정원</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=73"
+                          >한국기독교순교자기념관</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1068&q_clCode=2&q_lwprtClCode=1"
+                      >모범음식점</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1068&q_clCode=2&q_lwprtClCode=1"
+                          >한식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1068&q_clCode=2&q_lwprtClCode=2"
+                          >한정식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1068&q_clCode=2&q_lwprtClCode=3"
+                          >중식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1068&q_clCode=2&q_lwprtClCode=4"
+                          >일식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1068&q_clCode=2&q_lwprtClCode=5"
+                          >양식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1068&q_clCode=2&q_lwprtClCode=6"
+                          >뷔페</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.yongin.go.kr/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=33"
+                      >음식문화축제</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1068&q_clCode=1"
+                      >요리경연대회수상작</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1118"
+                      >용인시맛집</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1118"
+                          >음식문화거리맛집</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1119"
+                          >등산로주변대표맛집</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="https://ggtour.or.kr/food/food_best.php"
+                      >경기으뜸맛집</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMngList.do?q_cd=4004"
+                      >한옥스테이</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=74"
+                          >송담고택</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=75"
+                          >예직한옥마을</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=86"
+                          >한옥풍경하우스</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=76"
+                          >효종당</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1082"
+                      >숙박업소</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1082"
+                          >관광숙박업</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1092"
+                          >일반숙박업</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1111"
+                      >등록캠핑장</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1094"
+                      >사우나&찜질방</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=82"
+                      >쇼핑/특산품</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=82"
+                          >용인중앙시장</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/trrsrt/BD_selectTrrsrtMng.do?q_tsn=84"
+                          >백암5일장</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="http://farm.yongin.go.kr/">용인특산물</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/home/tour/tvGd/tvGdInf.jsp">여행도우미</a>
+
+                    <ul>
+                      <li>
+                        <a href="/home/tour/tvGd/tvGdInf.jsp">용인관광안내소</a>
+                      </li>
+
+                      <li>
+                        <a href="/tour/ctgresve/BD_selectCtgResveInfo.do"
+                          >문화관광해설사 예약</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/tour/map/BD_selectMapRqstInfo.do"
+                          >관광지도 신청</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/component/resrce/file/ND_resrceFileDownload.do?resrceSn=233&resrceVer=1&fileSn=1"
+                          >관광책자(다운로드)</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1013&q_clCode=1"
+                          >관광소식</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1013&q_clCode=2"
+                      >열린마당</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1013&q_clCode=2"
+                          >공지사항</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1013&q_clCode=3"
+                          >보도자료</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1045"
+                          >자주하는질문</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1053"
+                          >Q&A</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1041"
+                          >여행후기</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/home/www/www11/www11_01/www11_01_08.jsp">시민안전</a>
+                <ul>
+                  <li>
+                    <a href="/home/www/www11/www11_01/www11_01_08.jsp"
+                      >시민안전보험</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="/home/www/www11/www11_01/www11_01_09/www11_01_09_01.jsp"
+                      >풍수해보험</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/www/www11/www11_01/www11_01_09/www11_01_09_01.jsp"
+                          >풍수해보험</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/www/www11/www11_01/www11_01_09/www11_01_09_02.jsp"
+                          >소상공인 풍수해보험</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/web/programManagement/BD_selectProgramManagementDreamSafetyBusView.do"
+                      >찾아가는안전체험</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="http://safe.yongin.go.kr/web/html/index.php"
+                      target="_blank"
+                      title="새창으로 이동합니다."
+                      >재난CCTV영상</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/user/web/radondetector/BD_selectRadonDetectorList.do"
+                  >시민참여</a
+                >
+                <ul>
+                  <li>
+                    <a
+                      href="/user/web/radondetector/BD_selectRadonDetectorList.do"
+                      >실내 라돈측정기 대여신청</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="http://sotong.yongin.go.kr/front/memberInfoService.do"
+                      target="_blank"
+                      title="새창으로 이동합니다."
+                      >손바닥소식신청</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/qestnar/BD_selectQestnarList.do?q_realmCode=ctznPropse"
+                      >설문조사</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a
+                  href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=101"
+                  >마이페이지</a
+                >
+                <ul>
+                  <li>
+                    <a
+                      href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=101"
+                      >나의민원정보</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=101"
+                          >민원사전상담예약</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=102"
+                          >공익신고센터</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1001"
+                          >공직자부조리신고</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1002"
+                          >모범공무원추천</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1003"
+                          >부동산불법중개행위신고</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1004"
+                          >민원모니터</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1005"
+                          >시민감사관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1006"
+                          >규제개혁신고</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1007"
+                          >예산편성에바란다</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1008"
+                          >공동주택법률상담실</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1009"
+                          >차량등록과>무엇이든물어보세요</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1010"
+                          >기후변화체험>묻고답하기</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1011"
+                          >문화관광>열린마당>Q&A</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=1012"
+                          >청탁금지법 신고</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="https://m.epeople.go.kr/frame_cvpl/frameCvpl.do?anc_code=4050000&channel=4050000&menu_code=OP001"
+                          target="_blank"
+                          title="새창으로 이동합니다."
+                          >전자민원창구</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myboard/BD_selectMyBoardList.do?q_menuGubunCd=1008"
+                          >시민제안</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/web/prkstop/BD_opnstemFobjctList.do"
+                          >주정차과태료이의신청</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1073"
+                          >시장과의대화</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1001"
+                      >체험예약현황</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1001"
+                          >주민참여예산학교</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1002"
+                          >민방위교육</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1003"
+                          >시민안전체험교육</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1004"
+                          >옥외광고업종사자교육</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1005"
+                          >공원이용프로그램</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1006"
+                          >기후변화체험</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1007"
+                          >용인농촌테마파크예약</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1008"
+                          >숲목재체험</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1009"
+                          >용인문화유적전시관</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1010"
+                          >예절교육체험</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1011"
+                          >내나무심기</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/myyongin/myexprnedc/BD_selectMyExprnEdcList.do?q_menuGubunCd=1012"
+                          >방범CCTV 통합관제센터 견학</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/health/edc/BD_selectHelthEdcReqList.do"
+                          target="_blank"
+                          title="새창으로 이동합니다."
+                          >보건교육신청</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/educity/myPage/BD_selectMyTalntCntrList.do?q_cate=ctbt"
+                          >재능기부</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="http://www.yongin.go.kr/tour/ctgresve/BD_selectApplcntInfo.do?q_link=L"
+                          >문화관광해설사 예약</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/user/web/lgzWste/wsteExhstStatus/BD_selectWsteExhstReqList.do?exhstTyCode=RESERVE"
+                      >신청현황</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/user/web/lgzWste/wsteExhstStatus/BD_selectWsteExhstReqList.do?exhstTyCode=RESERVE"
+                          >대형폐기물배출</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="https://sotong.yongin.go.kr/front/memberInfoService.do"
+                          target="_blank"
+                          title="새창으로 이동합니다."
+                          >손바닥소식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/educity/myPage/BD_selectMyEduApplyList.do"
+                          >교육</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="https://parkingsms.yongin.go.kr/WizshotCarControl/member/index.php"
+                          target="_blank"
+                          title="새창으로 이동합니다."
+                          >주정차단속문자알림</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/webcontent/resrce/1/2016/1/14/ecb3247b-1b2a-4aa1-ab3f-88b070b0cbea.pdf"
+                          >관광책자</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <button type="button" id="btn_allmenu_close">
+              전체메뉴 닫기
+            </button>
+          </nav>
+
+          <a
+            href="https://www.yongin.go.kr/login/BD_login.do"
+            class="btn_login"
+            role="button"
+            >로그인</a
+          >
+        </header>
+        <!-- // [반응형] 모바일 헤더 -->
+
+        <div id="containerWrap">
+          <div id="container">
+            <div id="lnb">
+              <div class="lnb_type1">
+                <!--  					<div class="lnb_type1">-->
+                <!-- lnb st 지정 -->
+
+                <h2 class="topMenu">
+                  용인소식
+                </h2>
+                <ul>
+                  <!-- 해당 메뉴에 class="on" 추가 -->
+
+                  <li class="on">
+                    <a
+                      href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=1"
+                      >새소식</a
+                    >
+
+                    <ul>
+                      <li class="on">
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=1"
+                          >시정소식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/web/newsApi/BD_selectNewsApiList.do"
+                          >도정소식</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1020"
+                          >보도자료</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/event/BD_selectClturEventPfmcList.do?q_clCode=1"
+                          >문화행사/공연</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/web/empmntestinfo/BD_selectEmpmnTestInfoList.do?q_menu=1"
+                          >채용/시험정보</a
+                        >
+                      </li>
+
+                      <li>
+                        <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1091"
+                          >사서가 추천하는 도서</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- 해당 메뉴에 class="on" 추가 -->
+
+                  <li>
+                    <a
+                      href="/home/yiNw/yiNwStable/yiNwStable01/yiNwStable01_01.jsp"
+                      >입법예고/공고</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/yiNw/yiNwStable/yiNwStable01/yiNwStable01_01.jsp"
+                          >입법예고</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/home/yiNw/yiNwStable/yiNwStable02/yiNwStable02_01.jsp"
+                          >고시공고</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- 해당 메뉴에 class="on" 추가 -->
+
+                  <li>
+                    <a href="/home/yiNw/yiNwInfo/yiNwInfo01/yiNwInfo01_01.jsp"
+                      >입찰계약정보</a
+                    >
+
+                    <ul>
+                      <li>
+                        <a
+                          href="/home/yiNw/yiNwInfo/yiNwInfo01/yiNwInfo01_01.jsp"
+                          >입찰공고</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=3"
+                          >수의계약내역 공개방</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          href="http://contract.yongin.go.kr/"
+                          target="_blank"
+                          title="새창으로 이동합니다."
+                          >용인시 계약정보공개 시스템</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="contents">
+              <div class="h3_box">
+                <h3 class="top_banner_bbs">
+                  <!-- 본문 타이틀 -->
+
+                  시정소식
+                </h3>
+
+                <ul class="location">
+                  <!-- 로케이션 -->
+
+                  <li class="first">
+                    HOME
+                  </li>
+
+                  <li class="">
+                    용인소식
+                  </li>
+
+                  <li class="">
+                    새소식
+                  </li>
+
+                  <li class="end">
+                    시정소식
+                  </li>
+                </ul>
+
+                <!-- [반응형] 모바일 로케이션 -->
+                <div id="mobile_location">
+                  <div class="bg"></div>
+
+                  <dl>
+                    <dt>
+                      <a href="#">
+                        시정
+                      </a>
+                    </dt>
+                    <dd>
+                      <ul>
+                        <li class="on">
+                          <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1020"
+                            >시정</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="https://m.epeople.go.kr">민원안내</a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/home/www/www03/www03_02/www03_02_06/www03_02_06_01.jsp"
+                            >보건/복지</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="/user/web/prkstop/BD_selectRegltInquiry.do"
+                            >교통</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="/m/ygmn.jsp">청년</a>
+                        </li>
+
+                        <li>
+                          <a href="/edu/index.do">교육포털</a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/user/web/event/BD_selectClturEventPfmcList.do?q_clCode=2"
+                            >투어용인</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="/home/www/www11/www11_01/www11_01_08.jsp"
+                            >시민안전</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/user/web/radondetector/BD_selectRadonDetectorList.do"
+                            >시민참여</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/user/web/myyongin/mycivilappeal/BD_selectMyCivilAppealList.do?q_menuGubunCd=101"
+                            >마이페이지</a
+                          >
+                        </li>
+                      </ul>
+                      <button type="button" class="btn_loc_close">
+                        레이어 닫기
+                      </button>
+                    </dd>
+                    <dt>
+                      <a href="#">
+                        용인시정
+                      </a>
+                    </dt>
+                    <dd>
+                      <ul>
+                        <li class="on">
+                          <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1020"
+                            >용인시정</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/common/orgcht/BD_selectOrgList.do?q_domainCode=1"
+                            >시정안내</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="/home/mayor/jcmIf/jcmIfGrg.jsp"
+                            >시민시장실</a
+                          >
+                        </li>
+                      </ul>
+                      <button type="button" class="btn_loc_close">
+                        레이어 닫기
+                      </button>
+                    </dd>
+
+                    <dt>
+                      <a href="#"> 시정소식</a>
+                    </dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <a href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1020"
+                            >보도자료</a
+                          >
+                        </li>
+
+                        <li class="on">
+                          <a
+                            href="/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=1"
+                            >시정소식</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/user/web/empmntestinfo/BD_selectEmpmnTestInfoList.do?q_menu=1"
+                            >채용/시험정보</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/home/yiNw/yiNwStable/yiNwStable02/yiNwStable02_01.jsp"
+                            >고시공고</a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/home/yiNw/yiNwInfo/yiNwInfo01/yiNwInfo01_01.jsp"
+                            >입찰공고</a
+                          >
+                        </li>
+                      </ul>
+                      <button type="button" class="btn_loc_close">
+                        레이어 닫기
+                      </button>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- // [반응형] 모바일 로케이션 -->
+              </div>
+
+              <!-- 작업 시작 -->
+              <div class="cont_box">
+                <form
+                  name="dataForm"
+                  id="dataForm"
+                  method="get"
+                  action="BD_selectBbsList.do"
+                >
+                  <div class="searchBox">
+                    <div class="search">
+                      <input type="hidden" name="q_menu" id="q_menu" value="" />
+                      <!-- 열린감사 설정 Start -->
+
+                      <!-- 열린감사 설정 End -->
+
+                      <label for="q_bbsType">구분</label>
+                      <select
+                        name="q_bbsType"
+                        id="q_bbsType"
+                        class="select"
+                        style="width: 150px;"
+                      >
+                        <option value="">-- 전체 --</option>
+                        <option value="1001">대표홈페이지</option>
+                        <option value="1013">투어용인</option>
+                        <option value="1015">상하수도</option>
+                        <option value="1016">용인통계</option>
+                        <option value="1017">평생학습</option>
+                        <option value="1018">농업기술</option>
+                        <option value="1019">보건소</option>
+                      </select>
+
+                      <input
+                        type="hidden"
+                        name="q_clCode"
+                        id="q_clCode"
+                        value="1"
+                      />
+
+                      <input
+                        type="hidden"
+                        name="q_lwprtClCode"
+                        id="q_lwprtClCode"
+                        value=""
+                      />
+
+                      <label for="q_searchKeyTy" class="hide">검색선택</label>
+                      <select
+                        name="q_searchKeyTy"
+                        id="q_searchKeyTy"
+                        class="select"
+                        style="width: 111px;"
+                        title="검색선택"
+                      >
+                        <option value="">-- 검색선택 --</option>
+
+                        <option value="sj___1002" selected="selected"
+                          >제목</option
+                        >
+
+                        <option value="lngtCn___1002">내용</option>
+
+                        <option value="deptNm___1002">부서명</option>
+                      </select>
+                      <label for="q_searchVal" class="hide">검색어</label>
+                      <input
+                        type="text"
+                        name="q_searchVal"
+                        id="q_searchVal"
+                        value=""
+                        class="form-control"
+                        title="검색어 입력"
+                        style="ime-mode:active"
+                      />
+                      <button type="submit" class="txt_button1">
+                        검색
+                      </button>
+                      <button
+                        type="submit"
+                        class="txt_button1"
+                        onclick="opSearchReset();"
+                      >
+                        초기화
+                      </button>
+                    </div>
+                  </div>
+                  <input
+                    type="hidden"
+                    name="q_bbsCode"
+                    id="q_bbsCode"
+                    value="1001"
+                  />
+                  <input
+                    type="hidden"
+                    name="q_bbscttSn"
+                    id="q_bbscttSn"
+                    value=""
+                  />
+
+                  <div class="result_wrap">
+                    <fieldset>
+                      <legend class="sr-only">
+                        페이지당 목록갯수 선택
+                      </legend>
+                      <div class="float_left">
+                        전체 16688건 (1 / 1669 Page)
+                      </div>
+
+                      <!-- 					<div class="float_right"> -->
+                      <!-- 						<div class="pg_list"> -->
+
+                      <!-- 							</select> -->
+
+                      <!-- 						</div> -->
+                      <!-- 					</div> -->
+                    </fieldset>
+
+                    <input
+                      type="hidden"
+                      name="q_currPage"
+                      id="q_currPage"
+                      value="1"
+                    />
+
+                    <input
+                      type="hidden"
+                      name="q_sortName"
+                      id="q_sortName"
+                      value=""
+                    />
+
+                    <input
+                      type="hidden"
+                      name="q_sortOrder"
+                      id="q_sortOrder"
+                      value=""
+                    />
+                  </div>
+                </form>
+
+                <div class="t_list">
+                  <table>
+                    <caption>
+                      시정소식
+                    </caption>
+                    <colgroup>
+                      <col style="width:36px" />
+                      <!-- 번호 -->
+
+                      <col />
+                      <!-- 제목 -->
+
+                      <col style="width:41px" />
+                      <!-- 첨부파일 -->
+
+                      <col style="width:110px" />
+                      <!-- 등록부서 -->
+
+                      <col style="min-width:80px" />
+                      <!-- 작성일 -->
+
+                      <!-- 열린감사 설정 Start -->
+
+                      <!-- 열린감사 설정 End -->
+
+                      <col style="width:41px" />
+                      <!-- 조회 -->
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          번호
+                        </th>
+                        <!-- 번호 -->
+
+                        <th scope="col">
+                          제목
+                        </th>
+                        <!-- 제목 -->
+
+                        <th scope="col">첨부<br />파일</th>
+                        <!-- 첨부파일 -->
+
+                        <th scope="col">
+                          부서명
+                        </th>
+                        <!-- 등록부서 -->
+
+                        <th scope="col">
+                          등록일
+                        </th>
+                        <!-- 작성일 -->
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <th scope="col">
+                          조회수
+                        </th>
+                        <!-- 조회 -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          16688
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20191115095233638"
+                            >[보건소] 아동학대신고의무자 교육 사이트 안내</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(1)
+                        </td>
+
+                        <td>
+                          보건정책과
+                        </td>
+
+                        <td>
+                          2019-11-15
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          7
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16687
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20191114173726007"
+                            >「수원 115-6구역 힐스테이트 푸르지오」 장애인
+                            특별공급 안내</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(2)
+                        </td>
+
+                        <td>
+                          장애인복지과
+                        </td>
+
+                        <td>
+                          2019-11-14
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          38
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16686
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20191114171439513"
+                            >「수원 113-12구역 오목천역 쌍용 더 플래티넘」
+                            장애인 특별공급 안내</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(2)
+                        </td>
+
+                        <td>
+                          장애인복지과
+                        </td>
+
+                        <td>
+                          2019-11-14
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          20
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16685
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=1&q_bbscttSn=20191114145410345"
+                            >[보건소] 감염병으로부터 안전한 해외여행 준비하기</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(1)
+                        </td>
+
+                        <td>
+                          보건정책과
+                        </td>
+
+                        <td>
+                          2019-11-14
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          39
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16684
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20191113171507464"
+                            >「인천 유림노르웨이숲 에듀시티」 장애인 특별공급
+                            안내</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(2)
+                        </td>
+
+                        <td>
+                          장애인복지과
+                        </td>
+
+                        <td>
+                          2019-11-13
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          38
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16683
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20191113171333558"
+                            >「안양 아르테자이」 장애인 특별공급 안내</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(2)
+                        </td>
+
+                        <td>
+                          장애인복지과
+                        </td>
+
+                        <td>
+                          2019-11-13
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          26
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16682
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20191113155641320"
+                            >용인 독립운동 학술발표회</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(1)
+                        </td>
+
+                        <td>
+                          문화예술과
+                        </td>
+
+                        <td>
+                          2019-11-13
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          48
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16681
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20191113130739311"
+                            >「안산 초지역 e편한세상 센트럴포레」 장애인
+                            특별공급 안내</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(2)
+                        </td>
+
+                        <td>
+                          장애인복지과
+                        </td>
+
+                        <td>
+                          2019-11-13
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          28
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16680
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20191113105759640"
+                            >「2019 용인 도시정책포럼」 개최 안내</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(1)
+                        </td>
+
+                        <td>
+                          도시계획상임기획단
+                        </td>
+
+                        <td>
+                          2019-11-13
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          82
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          16679
+                        </td>
+
+                        <td class="td_al">
+                          <a
+                            href="/user/bbs/BD_selectBbs.do?q_bbsCode=1019&q_clCode=2&q_bbscttSn=20191113102030844"
+                            >[보건소] 2019 심폐소생술 교육 (일반인대상)-
+                            2019.11.28(목) 13:00~15:00</a
+                          >
+
+                          <img
+                            class="bbsNewImage"
+                            src="/resources/openworks4/theme/default/images/bbs/ico_new.gif"
+                            alt="New"
+                          />
+                        </td>
+
+                        <td>
+                          <img
+                            src="/resources/user/web/images/common/ico_list.gif"
+                            alt="첨부파일"
+                          />&nbsp;(1)
+                        </td>
+
+                        <td>
+                          보건행정과
+                        </td>
+
+                        <td>
+                          2019-11-13
+                        </td>
+
+                        <!-- 열린감사 설정 Start -->
+
+                        <!-- 열린감사 설정 End -->
+
+                        <td>
+                          93
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- 페이징 -->
+
+                <div class="paging">
+                  <ul>
+                    <li class="on">
+                      <a href="#" title="현재 1 페이지" onclick="return false;"
+                        >1</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(2); return false;"
+                        title="2 페이지"
+                        >2</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(3); return false;"
+                        title="3 페이지"
+                        >3</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(4); return false;"
+                        title="4 페이지"
+                        >4</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(5); return false;"
+                        title="5 페이지"
+                        >5</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(6); return false;"
+                        title="6 페이지"
+                        >6</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(7); return false;"
+                        title="7 페이지"
+                        >7</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(8); return false;"
+                        title="8 페이지"
+                        >8</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(9); return false;"
+                        title="9 페이지"
+                        >9</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        onclick="opMovePage(10); return false;"
+                        title="10 페이지"
+                        >10</a
+                      >
+                    </li>
+
+                    <li class="blist_btn">
+                      <a
+                        href="#"
+                        onclick="opMovePage(11); return false;"
+                        title="다음페이지그룹 가기"
+                        ><img
+                          src="/resources/user/web/images/bbs/blist_next.gif"
+                          alt="다음 페이지"
+                      /></a>
+                    </li>
+                    <li class="blist_btn">
+                      <a
+                        href="#"
+                        onclick="opMovePage(1669); return false;"
+                        title="마지막페이지로 가기"
+                        ><img
+                          src="/resources/user/web/images/bbs/blist_last.gif"
+                          alt="마지막 페이지"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- //페이징 -->
+                <!-- 버튼 -->
+                <div class="overflow"></div>
+                <!-- //버튼 -->
+              </div>
+              <!-- 작업 끝 -->
+            </div>
+
+            <!-- satisfaction -->
+
+            <div id="satisfy">
+              <!-- 만족도조사 survey -->
+
+              <span>현재 페이지에서 제공하는 정보에 만족하십니까?</span>
+              <form
+                id="opSatisfyForm"
+                name="opSatisfyForm"
+                method="post"
+                action="/user/cms/evl/ND_insertCmsEvl.do"
+              >
+                <input type="hidden" name="domnCode" value="1" />
+                <input type="hidden" name="userMenuCode" value="yiNwNews02" />
+                <div class="marB15">
+                  <!-- 			<input type="hidden" value="67" name="menuCd" /> -->
+                  <input
+                    type="radio"
+                    value="5"
+                    id="iemNo_5"
+                    name="iemNo"
+                  /><label for="iemNo_5">매우만족</label>
+                  <input
+                    type="radio"
+                    value="4"
+                    id="iemNo_4"
+                    name="iemNo"
+                  /><label for="iemNo_4">만족</label>
+                  <input
+                    type="radio"
+                    value="3"
+                    id="iemNo_3"
+                    name="iemNo"
+                  /><label for="iemNo_3">보통</label>
+                  <input
+                    type="radio"
+                    value="2"
+                    id="iemNo_2"
+                    name="iemNo"
+                  /><label for="iemNo_2">불만족</label>
+                  <input
+                    type="radio"
+                    value="1"
+                    id="iemNo_1"
+                    name="iemNo"
+                  /><label for="iemNo_1">매우불만족</label>
+                </div>
+                <div class="marB10">
+                  <label for="opatclCn" class="hide">의견 입력</label>
+                  <input
+                    type="text"
+                    title="의견 입력"
+                    name="opatclCn"
+                    id="opatclCn"
+                  />
+                  <button
+                    class="conform"
+                    type="button"
+                    onclick="jsSubmit(); return false;"
+                  >
+                    평가하기
+                  </button>
+                </div>
+              </form>
+
+              <script type="text/javascript">
+                //<![CDATA[
+                /* 초기화 */
+                $(document).ready(function() {});
+
+                var jsSubmit = function() {
+                  var iemNoVal = $(
+                    "#opSatisfyForm input[name='iemNo']:checked"
+                  ).val();
+                  if (!iemNoVal) {
+                    opWarningMsg("만족도 항목을 선택하세요.");
+                    return false;
+                  }
+                  $("#opSatisfyForm").ajaxSubmit({
+                    url: $(this).attr("action"),
+                    type: "POST",
+                    dataType: "json",
+                    success: function(response) {
+                      if (response.result) {
+                        opSuccessMsg("만족도 평가를 등록하였습니다.");
+                      } else {
+                        opWarningMsg(response.message);
+                      }
+                    }
+                  });
+                  return false;
+                };
+
+                //]]>
+              </script>
+
+              <!-- //survey -->
+
+              <!-- 담당정보 person-in-charge -->
+
+              <!-- //person-in-charge -->
+            </div>
+            <!-- //satisfaction -->
+          </div>
+        </div>
+
+        <!-- footer { -->
+        <div id="subFooter">
+          <div class="footer_info">
+            <div class="inner">
+              <div class="footer_menu">
+                <ul class="clr">
+                  <li>
+                    <a href="/home/yonginInfo/yonginInfo_03.jsp"
+                      >개인정보처리방침</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/home/yonginInfo/yonginInfo_04.jsp"
+                      >영상정보처리기기운영관리방침
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/home/yonginInfo/yonginInfo_02.jsp"
+                      >뷰어다운로드</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/user/web/sub/sitemap.do">사이트맵</a>
+                  </li>
+                  <li>
+                    <a href="/home/yonginInfo/yonginInfo_06.jsp"
+                      >이메일무단수집거부</a
+                    >
+                  </li>
+                </ul>
+                <div class="address">
+                  [17019] 경기도 용인시 처인구 중부대로 1199(삼가동)
+                  <br />
+                  COPYRIGHT(C) YONGIN CITY. ALL RIGHTS RESERVED.
+                  <a href="/home/yiIf/yiIfHall/yiIfHall04.jsp" class="fax_num"
+                    >부서별FAX번호<img
+                      src="/resources/user/main/images/main/arr_fax.png"
+                      alt="바로가기"
+                  /></a>
+                </div>
+              </div>
+              <a
+                href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110"
+                target="_blank"
+                class="webacces"
+                ><img
+                  src="/resources/user/main/images/main/img_webacces.png"
+                  alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"
+                  title="국가 공인 인증기관 : 웹와치"
+              /></a>
+
+              <div class="footbottom">
+                <ul class="dot02">
+                  <li>
+                    민원안내콜센터 : 1577-1122
+                  </li>
+                  <li>
+                    문자상담 : 09:00 ~ 18:00
+                  </li>
+                  <li>
+                    대표번호 : 031-324-2114
+                  </li>
+                </ul>
+                <img
+                  src="/resources/user/main/images/main/mw_qr.gif"
+                  alt="http://www.yongin.go.kr/mayor/index.do"
+                  class="mw_qr"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- } footer -->
+
+        <!-- [반응형] 모바일 푸터 -->
+        <footer id="m_footer">
+          <ul id="sns">
+            <li>
+              <a href="http://yonginsiblog.kr/"
+                ><img
+                  src="/resources/user/mobile/images/ico_blog.png"
+                  alt="블로그"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/yicity"
+                ><img
+                  src="/resources/user/mobile/images/ico_fb.png"
+                  alt="페이스북"
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Yonginsi_tr"
+                ><img
+                  src="/resources/user/mobile/images/ico_tw.png"
+                  alt="트위터"
+              /></a>
+            </li>
+          </ul>
+          <ul id="policy">
+            <li>
+              <a href="https://www.yongin.go.kr/login/BD_login.do">로그인</a>
+            </li>
+            <li>
+              <a href="https://www.yongin.go.kr/user/join/BD_userTypeChoose.do"
+                >회원가입</a
+              >
+            </li>
+
+            <li>
+              <a href="/home/yonginInfo/yonginInfo_03.jsp">개인정보처리방침</a>
+            </li>
+            <li>
+              <a href="https://www.yongin.go.kr/">PC버전보기</a>
+            </li>
+          </ul>
+          <a
+            href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110"
+            target="_blank"
+            class="webacces"
+            ><img
+              src="/resources/user/main/images/main/img_webacces.png"
+              alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"
+              title="국가 공인 인증기관 : 웹와치"
+          /></a>
+
+          <p class="cscenter">
+            용인시 콜센터
+            <strong
+              ><a href="tel:1577-1122">1577-1122</a> (<a href="tel:031-324-2114"
+                >031-324-2114</a
+              >)</strong
+            >
+          </p>
+          <address>
+            [17019]경기도 용인시 처인구 중부대로 1199(삼가동)<br />
+            COPYRIGHT© 2016, YONGIN CITY ALL RIGHTS RESERVED.
+          </address>
+          <a href="#top" class="btn_top"
+            ><img src="/resources/user/mobile/images/btn_top.png" alt="TOP"
+          /></a>
+        </footer>
+        <!-- // [반응형] 모바일 푸터 -->
+      </div>
+    </div>
+    <!-- //allWarpper -->
+  </body>
+</html>
